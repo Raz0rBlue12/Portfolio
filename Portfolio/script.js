@@ -43,8 +43,7 @@ links.forEach(link => {
   });
 });
 
-// --- NEW: Accurate Scroll Spy ---
-// This new function replaces the old IntersectionObserver
+// --- Scroll Spy ---
 function updateActiveLinkOnScroll() {
   let currentSectionId = '';
   const navHeight = mainNav.offsetHeight; // Get navbar height for offset

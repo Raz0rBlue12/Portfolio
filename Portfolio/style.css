@@ -22,7 +22,7 @@ nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin-left: auto; /* push links to right */
+  margin-left: auto;
   position: relative;
 }
 nav ul li a {
