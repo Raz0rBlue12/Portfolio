@@ -11,7 +11,7 @@ function createSakura() {
 }
 setInterval(createSakura, 500);
 
-// --- Navbar Logic ---
+// Navbar logic
 const navList = document.getElementById("nav-links");
 const links = navList.querySelectorAll("a");
 const indicator = document.querySelector(".indicator");
@@ -19,7 +19,6 @@ let activeLink = navList.querySelector("a.active");
 const sections = document.querySelectorAll("section");
 const mainNav = document.querySelector('nav');
 
-// Function to move the indicator
 function moveIndicator(element){
   const rect = element.getBoundingClientRect();
   const navRect = navList.getBoundingClientRect();
@@ -27,15 +26,12 @@ function moveIndicator(element){
   indicator.style.left = rect.left - navRect.left + "px";
 }
 
-// Initial position on page load
 window.addEventListener("load", () => moveIndicator(activeLink));
 
-// Move indicator on hover and click
 links.forEach(link => {
   link.addEventListener("mouseenter", () => moveIndicator(link));
   link.addEventListener("mouseleave", () => moveIndicator(activeLink));
   link.addEventListener("click", (e) => { 
-    // Small delay to allow scroll to start before updating active link
     setTimeout(() => {
         activeLink = e.target;
         moveIndicator(activeLink);
@@ -43,21 +39,19 @@ links.forEach(link => {
   });
 });
 
-// --- Scroll Spy ---
+// Scroll Spy
 function updateActiveLinkOnScroll() {
   let currentSectionId = '';
-  const navHeight = mainNav.offsetHeight; // Get navbar height for offset
+  const navHeight = mainNav.offsetHeight;
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - navHeight - 1; // Subtract navbar height and 1px buffer
+    const sectionTop = section.offsetTop - navHeight - 1;
     if (window.scrollY >= sectionTop) {
       currentSectionId = section.getAttribute('id');
     }
   });
 
   const newActiveLink = navList.querySelector(`a[href="#${currentSectionId}"]`);
-
-  // Update only if the active link has changed
   if (newActiveLink && newActiveLink !== activeLink) {
     links.forEach(link => link.classList.remove('active'));
     newActiveLink.classList.add('active');
@@ -65,6 +59,30 @@ function updateActiveLinkOnScroll() {
     moveIndicator(activeLink);
   }
 }
-
-// Listen for scroll events to run the function
 window.addEventListener('scroll', updateActiveLinkOnScroll);
+
+// Certificate Carousel
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+let currentIndex = 0;
+
+function showSlide(index) {
+  carousel.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Auto slide every 5 seconds
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % totalItems;
+  showSlide(currentIndex);
+}, 5000);
+
+// Arrow buttons
+document.querySelector('.left-arrow').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+  showSlide(currentIndex);
+});
+document.querySelector('.right-arrow').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalItems;
+  showSlide(currentIndex);
+});

@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riko's Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riko's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<nav>
-  <div class="logo">Riko's Portfolio</div>
-  <ul id="nav-links">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <div class="indicator"></div>
-  </ul>
-</nav>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Riko's Portfolio</div>
+    <ul id="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificate">Certificate</a></li>
+      <div class="indicator"></div>
+    </ul>
+  </nav>
 
-<section id="home" class="hero">
-  <h1>Hi, I'm Riko 👋</h1>
-  <p>I'm a simple student looking to improve myself. I love Axure, Figma, and doing UI/UX work. Not the best at coding, but I’ll always try my best!</p>
-  <a href="#projects" class="btn">View My Work</a>
-</section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Hi, I'm Riko 👋</h1>
+    <p>I'm a simple student looking to improve myself. I love Axure, Figma, and doing UI/UX work. Not the best at coding, but I’ll always try my best!</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
 
-<section id="projects" class="projects">
-  <h2>My Projects</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <img src="asset/Asphalt 9 Regends.jpg" alt="Asphalt 9 Project">
-      <h3>Project 1</h3>
-      <p>I made a website for a project about the game <strong>Asphalt 9: Legends</strong> where users can download the game, learn what it’s about, and explore all the different types of cars it features.</p>
-      <a href="https://github.com/Raz0rBlue12/HCI-Project" target="_blank" class="project-btn">View on GitHub</a>
-    </div>
-    <div class="project-card">
-      <img src="asset/steamlike.jpg" alt="Steam-like Project">
-      <h3>Project 2</h3>
-      <p>An app similar to <strong>Steam</strong> that me and my group developed for a project.</p>
-      <a href="https://github.com/Raz0rBlue12/UAP-BE" target="_blank" class="project-btn">View on GitHub</a>
-    </div>
-    <div class="project-card">
-      <img src="asset/plantify.jpg" alt="Plantify Project">
-      <h3>Project 3: Plantify</h3>
-      <p><strong>Plantify</strong> is an app me and my friend created for a UI/UX project. It helps users take care of their plants by showing all the important details they need to know about each plant. The app also has a forum where users can connect and talk to each other about their gardening experiences.</p>
-      <a href="https://github.com/Raz0rBlue12/Plantify" target="_blank" class="project-btn">View Project</a>
-    </div>
-  </div>
-</section>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
 
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <i class="fa-solid fa-envelope fa-2x"></i>
-      <p><a href="mailto:Riko.putra@binus.ac.id">Email</a></p>
-    </div>
-    <div class="contact-card">
-      <i class="fa-brands fa-linkedin fa-2x"></i>
-      <p><a href="https://www.linkedin.com/in/riko-ardiansyah-putra-276a1a333/" target="_blank">LinkedIn</a></p>
-    </div>
-    <div class="contact-card">
-      <i class="fa-solid fa-link fa-2x"></i>
-      <p><a href="https://linktr.ee/Riko.A.P" target="_blank">Linktree</a></p>
-    </div>
-  </div>
-</section>
+      <div class="project-card">
+        <img src="asset/Asphalt 9 Regends.jpg" alt="Asphalt 9 Project">
+        <h3>Project 1</h3>
+        <p>I made a website for a project about <strong>Asphalt 9: Legends</strong>.</p>
+        <a href="https://github.com/Raz0rBlue12/HCI-Project" target="_blank" class="project-btn">
+          <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+      </div>
 
-<footer>
-  <p>© 2025 Riko. All Rights Reserved.</p>
-</footer>
+      <div class="project-card">
+        <img src="asset/steamlike.jpg" alt="Steam-like Project">
+        <h3>Project 2</h3>
+        <p>An app similar to <strong>Steam</strong> that me and my group developed.</p>
+        <a href="https://github.com/Raz0rBlue12/UAP-BE" target="_blank" class="project-btn">
+          <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+      </div>
 
-<script src="script.js"></script>
+      <div class="project-card">
+        <img src="asset/plantify.jpg" alt="Plantify Project">
+        <h3>Project 3: Plantify</h3>
+        <p><strong>Plantify</strong> helps users take care of plants with all important info and a forum.</p>
+        <a href="https://github.com/Raz0rBlue12/Plantify" target="_blank" class="project-btn">
+          <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificate Section -->
+  <section id="certificate" class="certificate">
+    <h2>My Certificates</h2>
+    <div class="carousel-container">
+      <button class="arrow left-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="asset/cert1.jpg" alt="Certificate 1"></div>
+        <div class="carousel-item"><img src="asset/cert2.jpg" alt="Certificate 2"></div>
+        <div class="carousel-item"><img src="asset/cert3.jpg" alt="Certificate 3"></div>
+        <!-- Add more certificates here -->
+      </div>
+      <button class="arrow right-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+        <p><a href="mailto:Riko.putra@binus.ac.id">Email</a></p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-brands fa-linkedin fa-2x"></i>
+        <p><a href="https://www.linkedin.com/in/riko-ardiansyah-putra-276a1a333/" target="_blank">LinkedIn</a></p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-solid fa-link fa-2x"></i>
+        <p><a href="https://linktr.ee/Riko.A.P" target="_blank">Linktree</a></p>
+      </div>
+      <div class="contact-card">
+        <i class="fa-brands fa-github fa-2x"></i>
+        <p><a href="https://github.com/Raz0rBlue12" target="_blank">GitHub</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Riko. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
